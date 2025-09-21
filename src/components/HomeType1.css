@@ -1,0 +1,200 @@
+/* HomeType1 Styles - Simplified Pixel Art Layout */
+.home-container {
+  min-height: 100vh;
+  background: linear-gradient(145deg, #fdf2f8, #fce7f3);
+  padding: 2rem;
+  position: relative;
+}
+
+.home-content {
+  max-width: 1400px;
+  margin: 0 auto;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.home-title {
+  font-size: 3rem;
+  font-weight: bold;
+  color: #333;
+  text-align: center;
+  margin-bottom: 2rem;
+  text-transform: lowercase;
+  letter-spacing: 2px;
+}
+
+/* Sticky Note Styles */
+.sticky-note {
+  background: #fff3a0;
+  border: 2px solid #d4a574;
+  border-radius: 8px;
+  padding: 1rem;
+  box-shadow: 0 4px 12px rgba(212, 165, 116, 0.3);
+  transform: rotate(-1deg);
+  position: relative;
+  max-height: 400px;
+  min-height: 300px;
+  max-width: 550px;
+  min-width: 450px;
+  flex: 0 0 auto;
+}
+
+.sticky-note::before {
+  content: '';
+  position: absolute;
+  top: -8px;
+  right: 40px;
+  width: 30px;
+  height: 20px;
+  background: #d4a574;
+  border-radius: 0 0 8px 8px;
+  opacity: 0.7;
+}
+
+.sticky-note-text {
+  font-family: 'Comic Sans MS', cursive;
+  font-size: 1.2rem;
+  color: #8b6f47;
+  line-height: 1.4;
+  text-align: center;
+}
+
+.sticky-signature {
+  font-size: 1.2rem;
+  font-style: italic;
+  color: #be185d;
+  font-weight: bold;
+  text-align: right;
+  display: block;
+  margin-top: 2rem;
+}
+
+.main-area {
+  display: flex;
+  gap: 2rem;
+  align-items: flex-start;
+  justify-content: center;
+  margin-bottom: 2rem;
+  width: 100%;
+  flex-wrap: wrap;
+}
+
+/* Canvas Section */
+.canvas-section {
+  flex: 2;
+  display: flex;
+  justify-content: center;
+}
+
+/* Side Panel */
+.side-panel {
+  flex: 0 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  min-width: 300px;
+}
+
+/* Controls */
+.controls {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+}
+
+.capture-button,
+.exit-button {
+  padding: 1rem 2rem;
+  border: 3px solid #f1f5f9;
+  border-radius: 12px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  letter-spacing: 1px;
+  color: #be185d;
+}
+
+.capture-button {
+  background: linear-gradient(145deg, #fdf2f8, #fce7f3);
+}
+
+.capture-button:hover {
+  background: linear-gradient(145deg, #fce7f3, #f3e8ff);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(244, 114, 182, 0.15);
+  border-color: #fce7f3;
+}
+
+.exit-button {
+  background: linear-gradient(145deg, #f3e8ff, #e0e7ff);
+}
+
+.exit-button:hover {
+  background: linear-gradient(145deg, #e0e7ff, #ddd6fe);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(139, 92, 246, 0.15);
+  border-color: #e0e7ff;
+}
+
+.capture-button:active,
+.exit-button:active {
+  transform: translateY(0);
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .main-area {
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+  }
+  
+  .side-panel {
+    width: 100%;
+    align-items: center;
+  }
+}
+
+@media (max-width: 768px) {
+  .home-container {
+    padding: 1rem;
+  }
+  
+  .home-title {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .main-area {
+    gap: 1.5rem;
+  }
+  
+  .controls {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  
+  .capture-button,
+  .exit-button {
+    padding: 0.8rem 1.5rem;
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .home-title {
+    font-size: 2rem;
+  }
+  
+  
+  .capture-button,
+  .exit-button {
+    padding: 0.7rem 1.2rem;
+    font-size: 0.9rem;
+  }
+}

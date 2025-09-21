@@ -1,0 +1,219 @@
+/* HomeType2 Styles - Simplified Pixel Art Layout */
+.home-container-type2 {
+  min-height: 100vh;
+  background: #e9e5b9;
+  padding: 2rem;
+  position: relative;
+}
+
+.home-content-type2 {
+  max-width: 1400px;
+  margin: 0 auto;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.home-title-type2 {
+  font-size: 3rem;
+  font-weight: bold;
+  color: #333;
+  text-align: center;
+  margin-bottom: 2rem;
+  text-transform: lowercase;
+  letter-spacing: 2px;
+}
+
+/* Sticky Note Styles */
+.sticky-note-type2 {
+  background: #fff3a0;
+  border: 2px solid #fbbf24;
+  border-radius: 8px;
+  padding: 1rem;
+  box-shadow: 0 4px 12px rgba(251, 191, 36, 0.3);
+  transform: rotate(-1deg);
+  position: relative;
+  max-height: 400px;
+  min-height: 300px;
+  max-width: 550px;
+  min-width: 450px;
+  flex: 0 0 auto;
+}
+
+.sticky-note-type2::before {
+  content: '';
+  position: absolute;
+  top: -8px;
+  right: 40px;
+  width: 30px;
+  height: 20px;
+  background: #fbbf24;
+  border-radius: 0 0 8px 8px;
+  opacity: 0.7;
+}
+
+.sticky-note-text-type2 {
+  font-family: 'Comic Sans MS', cursive;
+  font-size: 1.2rem;
+  color: #a68960;
+  line-height: 1.4;
+  text-align: center;
+}
+
+.sticky-signature-type2 {
+  font-size: 1.2rem;
+  font-style: italic;
+  color: #fbbf24;
+  font-weight: bold;
+  text-align: right;
+  display: block;
+  margin-top: 2rem;
+}
+
+.main-area-type2 {
+  display: flex;
+  gap: 2rem;
+  align-items: flex-start;
+  justify-content: center;
+  margin-bottom: 2rem;
+  width: 100%;
+  flex-wrap: wrap;
+}
+
+/* Canvas Section */
+.canvas-section-type2 {
+  flex: 2;
+  display: flex;
+  justify-content: center;
+}
+
+/* Pixel Art Duo - Cat and Tulip side by side */
+.pixel-art-duo {
+  display: flex;
+  gap: 2rem;
+  align-items: flex-start;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+/* Side Panel */
+.side-panel-type2 {
+  flex: 0 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  min-width: 300px;
+}
+
+/* Controls */
+.controls-type2 {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+}
+
+.capture-button-type2,
+.exit-button-type2 {
+  padding: 1rem 2rem;
+  border: 3px solid #fef3c7;
+  border-radius: 12px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  letter-spacing: 1px;
+  color: #a16207;
+}
+
+.capture-button-type2 {
+  background: linear-gradient(145deg, #fefce8, #fef3c7);
+}
+
+.capture-button-type2:hover {
+  background: linear-gradient(145deg, #fef3c7, #fde68a);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(251, 191, 36, 0.15);
+  border-color: #fde68a;
+}
+
+.exit-button-type2 {
+  background: linear-gradient(145deg, #fffbeb, #fef3c7);
+}
+
+.exit-button-type2:hover {
+  background: linear-gradient(145deg, #fef3c7, #fed7aa);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(245, 158, 11, 0.15);
+  border-color: #fed7aa;
+}
+
+.capture-button-type2:active,
+.exit-button-type2:active {
+  transform: translateY(0);
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .main-area-type2 {
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+  }
+  
+  .side-panel-type2 {
+    width: 100%;
+    align-items: center;
+  }
+  
+  .pixel-art-duo {
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .home-container-type2 {
+    padding: 1rem;
+  }
+  
+  .home-title-type2 {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .main-area-type2 {
+    gap: 1.5rem;
+  }
+  
+  .controls-type2 {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  
+  .capture-button-type2,
+  .exit-button-type2 {
+    padding: 0.8rem 1.5rem;
+    font-size: 1rem;
+  }
+  
+  .pixel-art-duo {
+    gap: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .home-title-type2 {
+    font-size: 2rem;
+  }
+  
+  
+  .capture-button-type2,
+  .exit-button-type2 {
+    padding: 0.7rem 1.2rem;
+    font-size: 0.9rem;
+  }
+}
