@@ -10,10 +10,10 @@ function App() {
 
   const handleLogin = (code) => {
     // Define which codes lead to which home type
-    if (code === 'FLORES1' || code === 'amarillo1') {
+    if (code === 'TEMUCUPONMEL' || code === 'amarillo1') {
       setHomeType('type1')
       setCurrentView('home')
-    } else if (code === 'FLORES2' || code === 'amarillo2') {
+    } else if (code === 'TEMUCUPONSAR' || code === 'amarillo2') {
       setHomeType('type2')
       setCurrentView('home')
     } else {
